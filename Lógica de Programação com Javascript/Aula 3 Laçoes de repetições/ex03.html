@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        for (var i = 1004; i <= 2020; i += 4){
+            if (!(i % 100 == 0) || i % 400 == 0){
+                document.write(`<br> ${i} é ano bissexto`);
+            }else{
+                document.write(`<br><br> ${i} não é ano bissexto <br>`);
+            }
+        }
+    </script>
+</body>
+</html>
