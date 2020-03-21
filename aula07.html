@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programaçaõ</title>
+</head>
+<body>
+    <h1>Logica de Programação com JavaScript</h1>
+
+    <script>
+        var nP1 = parseFloat(prompt("Player 1 digite um numero:"));
+        var nP2 = parseFloat(prompt("Player 2 digite um numero:"));
+        
+        if(nP1 == nP2){
+            alert("EMPATE!");
+        }else{
+            var nSort = parseInt(Math.random() * 2);
+        
+             if (nSort == 0) {
+                  if( nP1 > nP2){
+                     alert(`o numero sorteado foi: ${nSort} - Player 2 Win`);
+                 }else{
+                     alert(`o numero sorteado foi: ${nSort} - Player 1 Win`);
+             }
+             }else{
+                 if( nP1 > nP2){
+                   alert(`o numero sorteado foi: ${nSort} - Player 1 Win`);
+                 }else{
+                   alert(`o numero sorteado foi: ${nSort} - Player 2 Win`);
+            }   
+        }
+        }
+
+        
+        
+    </script>
+</body>
+</html>
