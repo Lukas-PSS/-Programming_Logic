@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programação</title>
+</head>
+<body>
+    <h1>Logica de Programação com Java Script</h1>
+
+    <button onclick="calcular('+')">+</button>
+    <button onclick="calcular('-')">-</button>
+    <button onclick="calcular('*')">*</button>
+    <button onclick="calcular('/')">/</button>
+
+
+    <div id = "output"></div>
+
+    <script>
+
+    var n1 = parseInt(prompt("Digite um numero:"));
+    escrever();
+
+        function escrever(){
+            var output = document.querySelector("#output");
+            output.innerHTML = n1
+        }
+    
+    
+        function calcular(operador){
+            var n = parseFloat(prompt("digite outro numero"))
+            switch(operador){
+                case '+':
+                    n1 += n
+                    alert(n1)
+                    break
+                case '-':
+                    n1 -= n
+                    alert(n1)
+                    break
+                case '*':
+                    n1 *= n
+                    alert(n1)
+                    break
+                case '/':
+                    n1 /= n
+                    alert(n1)
+                    
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

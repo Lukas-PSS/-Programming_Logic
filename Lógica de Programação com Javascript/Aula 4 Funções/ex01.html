@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programação</title>
+</head>
+<body>
+    <h1>Logica de Programação com Java Script</h1>
+    <div id = "output"></div>
+
+    <script>
+        var output = document.querySelector("#output");
+        var msg = ""
+        for (var i = 1004; i <= 2020; i += 4){
+            if (!(i % 100 == 0) || i % 400 == 0){
+                msg += `<br> ${i} é ano bissexto`;
+            }else{
+                msg += `<br><br> ${i} não é ano bissexto <br>`;
+            }
+        }
+        output.innerHTML = msg
+    </script>
+</body>
+</html>
