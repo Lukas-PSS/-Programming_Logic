@@ -29,12 +29,26 @@
         function iniciaCalculo(operador){
             var n1 = Number(document.querySelector("#output").textContent);
             var n2 = parseFloat(prompt("Digite outro numero"));
-            var msg = calcular(operador, n1, n2);
-            escrever(msg)    
+
+        // try catch - trata de erros quando um valor indesejavel passe pelo código
+            try{
+                var msg = calcular(operador, n1, n2);
+            }catch(e){                                     
+                alert(e);        
+                return;
+            }
+
+            
+            escrever(msg);    
 
         }
     
         function calcular(operador, n1, n2){
+
+            if( isNaN(n1) || isNaN(n2)){
+                throw new Error('Digite um numero') //exibe erro quando passdo um parametro inesperado
+            }
+
             var numeroCalculado = null;
             switch(operador){
                 case '+':

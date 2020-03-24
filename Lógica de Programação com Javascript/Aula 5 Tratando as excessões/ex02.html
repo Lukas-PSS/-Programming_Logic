@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programação</title>
+</head>
+<body>
+    <div id="tela"></div>
+    <button onclick="calc_area()">Exibir Area</button>
+    <script>
+        calc_area();
+
+        function calc_area(){
+        var l1 = parseFloat(prompt("Digite o primeiro numero"));
+        var l2 = parseFloat(prompt("Digite o segundo numero"));
+        
+        var tela = document.querySelector('#tela')
+        if(isNaN(l1) || isNaN(l2)){
+            alert("Por favor digite um numero")
+        }
+        tela.innerHTML = (`<h1>A area total é ${l1 * l2}</h1>`)
+        }
+
+        
+        
+    </script>
+</body>
+</html>
