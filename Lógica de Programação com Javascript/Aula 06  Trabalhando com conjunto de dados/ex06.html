@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='tela'></div>
+
+    <script>
+        var pessoas = [
+            {"nome": "Thiago", "email": "thiago@gmail.com" },
+            {"nome": "Matheus", 'email': "matheus@hotmail.com" },
+            {"nome": "Larissa", 'email': "larissa@yahoo.com"}
+        ];
+
+        var user = new Object()
+            user.nome = "Maria";
+            user.email = "maria@gmail.com";
+
+        var user2 = new Object()
+            user2.nome = "Lukas";
+            user2.email = "lukas@gmail.com";  
+        
+        pessoas.push(user, user2);
+
+        msg= ''
+        var i = 0
+        while(pessoas[i]){
+            msg +=`<h2>Nome : ${pessoas[i].nome}</h2>`;
+            msg +=`<p><b>email</b> : ${pessoas[i].email}</p>`
+            i++ 
+        }
+
+        document.querySelector("#tela").innerHTML = msg
+    </script>
+</body>
+</html>

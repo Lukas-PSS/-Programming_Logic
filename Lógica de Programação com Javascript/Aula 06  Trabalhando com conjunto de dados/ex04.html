@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='tela'></div>
+    <script>
+
+
+        var Tv = new Object();
+        Tv.nome = "Smart Tv 4K";
+        Tv.preco = 1200;
+        Tv.quantidade = 12;
+        Tv.comprar = function comprar(qtd){
+            if( !qtd ){
+                qtd = 1
+            }
+            this.quantidade = this.quantidade - qtd
+            console.log(this.quantidade)
+        }
+        var msg = ''
+        msg += "nome : " + Tv.nome + "<br>";
+        msg += "preço : " + Tv.preco + "<br>";
+        msg += "quantidade : " + Tv.quantidade + "<br>";
+
+        
+            document.querySelector('#tela').innerHTML = msg
+        
+        
+    </script>
+</body>
+</html>

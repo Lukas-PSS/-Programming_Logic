@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='tela'></div>
+
+    <script>
+        var pecas = [
+            {"nome": "FillHeater", 'preco': 450000 },
+            {"nome": "FillNozlee", 'preco': 15000 },
+            {"nome": "FillPump", 'preco': 300000}
+        ];
+
+        msg= ''
+        for(var i = 0; i < pecas.length; i++){
+            msg +=`<h2>Produto : ${pecas[i].nome}</h2>`;
+            msg +=`<p>Preço : ${pecas[i].preco}</p>` 
+        }
+
+        document.querySelector("#tela").innerHTML = msg
+    </script>
+</body>
+</html>

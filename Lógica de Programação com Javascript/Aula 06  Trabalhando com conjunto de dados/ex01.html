@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programação</title>
+</head>
+<body>
+    <div id= "tela">
+
+    </div>
+
+    <script>
+        var produtos = new Array('arroz', 'feijão', 'frango', 'carne', 'peixe', 'pizza', 'pão');
+        msg = "";
+
+        produtos.push('banana', 'tomate','laranja');
+        
+        for(var i = 0; i < produtos.length; i++){
+            msg += `<br>Temos : ${i+1} - ${produtos[i]}`;
+        }
+        document.querySelector('#tela').innerHTML = msg;
+
+        //document.querySelector('#tela').innerHTML = produtos;
+    </script>
+</body>
+</html>

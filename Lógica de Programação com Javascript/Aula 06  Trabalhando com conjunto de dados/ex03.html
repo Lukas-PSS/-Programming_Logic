@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programação</title>
+</head>
+<body>
+    
+
+    <script>
+        var numeros = new Array (25, 30, 45, 28, 0 , 12, 78, 64);
+        var soma_P =  somaOsPares(numeros);
+        alert("A soma dos pares é:" + soma_P);
+
+        function somaOsPares(array){
+            var soma = 0;
+            for(var i = 0; i < numeros.length; i++){
+
+            if (numeros[i] % 2 == 0 && !isNaN(numeros[i])){
+                soma += numeros[i];
+            }
+        }
+        return soma;
+        }
+
+    </script>
+</body>
+</html>
