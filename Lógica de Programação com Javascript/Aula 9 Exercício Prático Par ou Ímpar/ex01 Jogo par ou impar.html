@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loteria</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Jogo do Par ou Impar</h1>
+    <p>digite um numero de 0 a 5
+    <input type="number" id = "meuNumero" min = "0" max = "5"></p>
+    <label><input type="radio" name="opção" value="par" checked>Par</label><br>
+    <label><input type="radio" name="opção" value="impar">Impar</label><br><br>
+    <button onclick="jogar()">Jogar</button>
+
+    <script>
+        var nComputador = ''
+        var nJogador = ''
+        var minhaEscolha = ''
+
+        function sortear(max){
+            return Math.floor(Math.random() * max) 
+        }
+
+        function jogar(){
+
+            nJogador = document.querySelector("#meuNumero").value
+            nComputador = sortear(5)
+            minhaEscolha = document.querySelector('input[type="radio"]:checked').value
+            if(!nJogador){
+                return alert("Escolha um numero de 1 a 5")
+            }
+            
+            resultado = parOuImpar(nComputador, nJogador)
+            console.log("numero do computador" + nComputador)
+            console.log("numero do jogador" + nJogador)
+            console.log(minhaEscolha)
+            
+            if(resultado == "Deu Par" && minhaEscolha == "par" || resultado == "Deu Impar" && minhaEscolha == "impar"){
+                alert("voce Ganhou")
+            }else{
+                alert("voce Perdeu")
+            }
+            
+            
+        }
+
+        function parOuImpar (nc, nj){
+            var result = Number(nc) + Number(nj) 
+             result  = ( result % 2 == 0) ? "Deu Par" : "Deu Impar"
+             return result
+        }
+
+
+
+        
+    </script>
+</body>
+</html>
