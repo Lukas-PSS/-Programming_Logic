@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Logica de Programação Javascript</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+        
+        <div id="output"></div>
+    </body>
+    
+    <script>
+        //matriz
+        var notas = [
+            [5,6,4,3], [2,8,5,6], [3,6,4,8], [2,8,4,9]
+        ];
+        
+        var mediaA = 0
+        
+        var msg = ""
+        for(var i = 0; i < notas.length; i++){
+            var mediaB = 0
+            for(var a = 0; a < notas[i].length; a++){
+                mediaB += notas[i][a] 
+                msg += `<br>nota da ${a+1}ª materia : ${notas[i][a]}` 
+            }
+            console.log(mediaB)
+            mediaB /=  notas[i].length
+            msg += `<br>A media de todas as materias do ${i+1}º bimestre é ${mediaB}<br><hr>` 
+            mediaA += mediaB 
+        }
+        mediaA /= notas.length
+        
+        msg += `<br><br>A media Anual é: ${mediaA}<br><br>`
+                
+        
+        document.querySelector('#output').innerHTML = msg;
+        
+        
+    </script>
+</html>
