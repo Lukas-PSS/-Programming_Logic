@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programação</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+        function dizOla(praquem, cb){
+            if(typeof cb == 'function'){
+                return cb(praquem)
+            } 
+
+            return  console.log('Ola', praquem)
+
+            
+
+        }
+
+        function boaNoite(p){
+            console.log("Boa Noite, ", p)
+        }
+
+        function boaTarde(p){
+            console.log("Boa Tarde, ", p)
+        }
+
+        dizOla('Maria')
+        dizOla('Vanessa', boaNoite)
+        dizOla('Pedro', boaTarde)
+        dizOla('Ana', function(who){
+            console.log('Bom dia, ', who)
+        })
+
+    </script>
+</body>
+</html>

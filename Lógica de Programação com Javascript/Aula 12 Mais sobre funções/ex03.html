@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de Programaçãp</title>
+</head>
+<body>
+    <script>
+
+       function test1(){
+           console.log('test1 chamado')
+       }
+
+       function test2(p){
+           console.log('test2 chamado recebendo p ', p)
+       }
+       
+       function executa(cb){
+           console.log('executa chamado')
+
+           if(typeof cb === "function"){
+               cb("PARAMETRO DE CALLBACK")
+           }
+       }
+
+       executa()
+       executa(test2)
+
+       executa(function(x){
+           console.log('com função anonima +', x)
+       })
+
+
+
+
+    </script>
+</body>
+</html>

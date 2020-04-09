@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica de programação</title>
+</head>
+<body>
+
+    
+    <script>
+        var chamou1 = 0
+        var chamou2 = 0
+        var chamou3 = 0 
+       
+        function fibonacci(n){
+            chamou1++
+            var a = 1
+            var b = 0
+            var temp 
+
+            while (n--) {
+                temp = a
+                a = a + b
+                b = temp
+            }
+            return b;
+
+        }
+
+        
+        console.log(fibonacci(30))
+        console.log('Chamou1', chamou1)
+
+        function fibonacci2(n){
+            chamou2++
+            if(n <= 2) return 1
+            return fibonacci2(n - 1) + fibonacci(n - 2)
+        }
+
+        
+        console.log(fibonacci2(30))
+        console.log('Chamou2', chamou2)
+
+        function fibonacci3(n, cache){
+            chamou3++
+            cache = cache || {}
+            if(cache[n]) return cache[n]
+
+            if(n <= 2) return 1
+            cache[n] = fibonacci3(n - 1 , cache) + fibonacci3(n - 2, cache)
+            return cache[n]
+        }
+
+        
+        console.log(fibonacci3(30))
+        console.log('Chamou3', chamou3)
+
+    </script>
+</body>
+</html>

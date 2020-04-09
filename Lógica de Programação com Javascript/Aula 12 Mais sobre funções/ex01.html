@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica  de Programação</title>
+</head>
+<body>
+    <script>
+
+        function dizbla(n){     // fução recurciva - chama ela mesma até determinado fim, é semelhante a um looping
+            // msg = ""
+            // while (n--){
+            //     msg += 'Bla '
+            // }
+            // return msg
+
+            return (n > 1) ? dizbla(--n) + ' bla' :  'bla'
+            
+            // if(n > 1){
+            //     return dizbla(--n) + ' bla'
+            // }
+            
+            // return 'bla'
+              
+        }
+
+        console.log(dizbla(10))
+
+    </script>
+</body>
+</html>
